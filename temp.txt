@@ -1,0 +1,12 @@
+          <on-change>
+            <set-value name="TEMP.locationHandle" value="toString(getLocationWithUniformDimensionNode(TEMP.context, TEMP.LegalOrg))" />
+				  <set-value name="x_td_delay_year" value="toString(getDimensionNodeName(getNodeByDimension(TEMP.context,'Project',null)))"/>					 
+					 <set-value name="x_do" value="toString(getDimensionNodeName(getNodeByDimension(TEMP.context,'ManagementOrg',null)))"/>					 
+					 <set-value name="x_bp" value="toString(getDimensionNodeName(getNodeByDimension(TEMP.context,'Process',null)))" />
+					 <set-value name="titleTxt"
+					 value="concat('Задача - ', toString(getDimensionNodeName(getNodeByDimension(TEMP.context,'ManagementOrg',null))),' - ',  toString(getDimensionNodeName(getNodeByDimension(TEMP.context,'Process',null))),' - ',  toString(getDimensionNodeName(getNodeByDimension(TEMP.context,'Project',null))))" />
+			       	 <set-value name="TEMP.projectLevelNo" value=" getObjectProperty(getNodeByDimension(TEMP.context,'Project',null),'levelNo')"/>
+			       	 <set-value name="activeFromDttm" value="getObjectProperty(getNodeByDimension(TEMP.context,'Project',null),'x_startdate')"/>
+			       	 <set-value name="activeToDttm" value="getObjectProperty(getNodeByDimension(TEMP.context,'Project',null),'x_enddate')"/>	
+			<set-value name="location" value="getLocationWithUniformDimensionNode(TEMP.context, TEMP.LegalOrg)" />					 
+         </on-change>
